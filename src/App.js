@@ -30,7 +30,7 @@ const App = () => {
   return (
     <div>
       <BrowserRouter>
-        <div className="flex-relative dark:bg-main-dark-bg">
+        <div className="flex relative dark:bg-main-dark-bg">
           <div className="fixed right-4 bottom-4" style={{ zIndex: "1000" }}>
             <TooltipComponent content="Settings" position="Top">
               <button
@@ -52,14 +52,16 @@ const App = () => {
             </div>
           )}
           <div
-            className={`dark:bg-main-dark-bg bg-main-bg min-h-sreen  w-full ${
-              activeMenu ? " md:ml-72" : " flex-2"
-            }`}
+            className={
+              activeMenu
+                ? 'dark:bg-main-dark-bg  bg-main-bg min-h-screen md:ml-72 w-full  '
+                : 'bg-main-bg dark:bg-main-dark-bg  w-full min-h-screen flex-2 '
+            }
           >
             <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full ">
               <Navbar />
             </div>
-          </div>
+          
 
           <div>
             <Routes>
@@ -74,17 +76,18 @@ const App = () => {
               <Route path="/kanban" element={<Kanban />} />
               <Route path="/editor" element={<Editor />} />
               <Route path="/calendar" element={<Calendar />} />
-              <Route path="/colorpicker" element={<ColorPicker />} />
+              <Route path="/color-picker" element={<ColorPicker />} />
               {/* Charts */}
               <Route path="/line" element={<Line />} />
               <Route path="/area" element={<Area />} />
               <Route path="/bar" element={<Bar />} />
               <Route path="/pie" element={<Pie />} />
               <Route path="/financial" element={<Financial />} />
-              <Route path="/colormapping" element={<ColorMapping />} />
+              <Route path="/color-mapping" element={<ColorMapping />} />
               <Route path="/pyramid" element={<Pyramid />} />
               <Route path="/stacked" element={<Stacked />} />
             </Routes>
+          </div>
           </div>
         </div>
       </BrowserRouter>

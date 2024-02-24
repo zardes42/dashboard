@@ -16,6 +16,7 @@ import {
   Area,
   Bar,
   Pie,
+  Line,
   Financial,
   ColorPicker,
   ColorMapping,

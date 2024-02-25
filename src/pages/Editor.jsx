@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Edotor = () => {
+const Editor = () => {
   return (
-    <div>Edotor</div>
+    <div>Editor</div>
   )
 }
 
-export default Edotor
+export default Editor
